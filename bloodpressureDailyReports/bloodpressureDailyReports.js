@@ -39,10 +39,10 @@ exports = async function() {
       
       const BCCmails = ["operaciones@gruposeara.com", "ces@gruposeara.com", "eduardo@grupooseara.com", "1664859gustavonajera@gmail.com"];
       
-      var ses_mail = "From: Cardiotrack  <" + SOURCE_EMAIL + ">\n";
+      var ses_mail = "From: Reporte Diario Cardiotrack - Presión Arterial  <" + SOURCE_EMAIL + ">\n";
       ses_mail += "To: " + reportEmails + "\n";
       ses_mail += "Bcc: " + BCCmails + "\n";
-      ses_mail += "Subject: " + name + ": Reporte de Presiones Arteriales, " + dayCut + "\n";
+      ses_mail += "Subject: " + name + ": Reporte Diario Cardiotrack - Presión Arterial, " + dayCut + "\n";
       ses_mail += "MIME-Version: 1.0\n";
       ses_mail += "Content-Type: multipart/mixed; boundary=\"NextPart\"\n\n";
       ses_mail += "--NextPart\n";
@@ -61,6 +61,6 @@ exports = async function() {
         RawMessage: { Data: ses_mail }
       });
     }
-  
+        
   });
 }

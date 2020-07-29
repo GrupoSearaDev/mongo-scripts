@@ -39,7 +39,7 @@ exports = async function() {
     
     const BCCmails = ["operaciones@gruposeara.com", "ces@gruposeara.com", "eduardo@grupooseara.com", "1664859gustavonajera@gmail.com"];
     
-    var ses_mail = "From: Cardiotrack  <" + SOURCE_EMAIL + ">\n";
+    var ses_mail = "From: Reporte Diario Cardiotrack - Temperatura  <" + SOURCE_EMAIL + ">\n";
     ses_mail += "To: " + reportTempEmails + "\n";
     ses_mail += "Bcc: " + BCCmails + "\n";
     ses_mail += "Subject: " + name + ": Reporte de Lecturas de Temperatura, " + dayCut + "\n";
@@ -57,12 +57,12 @@ exports = async function() {
     ses_mail += "--NextPart--";
       
      
-    //if(toCSV.length !== 0){
+    if(toCSV.length !== 0){
       const result = ses.SendRawEmail({
         Source: "seara.health@gmail.com",
         RawMessage: { Data: ses_mail }
       });
-    //}
+    }
   
   });
 }

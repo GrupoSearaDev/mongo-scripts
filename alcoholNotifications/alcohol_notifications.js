@@ -10,7 +10,7 @@ exports = async function(changeEvent) {
       
         // const secondLecture = await bps.find({ 
         //   rfid: rfid, 
-        //   companyId: BSON.ObjectId(companyId), 
+        //   companyId: BSON.ObjectId(companyIad), 
         //   createdAt:{ $gte: new Date(halfAndHourAgo) }
         // }).toArray();
       
@@ -49,7 +49,7 @@ exports = async function(changeEvent) {
         ses_mail += "\n\n";
         ses_mail += "--NextPart--";
         
-        
+    
         
         // if(systolic <= 89 || diastolic <= 59 || systolic >= 140 || diastolic >= 90){
           const result = ses.SendRawEmail({
